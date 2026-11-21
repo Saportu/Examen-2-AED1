@@ -201,3 +201,11 @@ correspondientes.
 ▪ Diagrama de flujo, diagrama de componentes y diagrama del grafo que emplea el
 sistema, escritos en Mermaid dentro del README.
 ```
+
+---
+
+## Prompt 6
+
+```
+Yes, merge to main
+```
