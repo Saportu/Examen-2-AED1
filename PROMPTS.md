@@ -165,3 +165,39 @@ Aprobación del plan de implementación y elección de la rama de trabajo (`sali
 ```
 [Botón "Create PR" en la herramienta — sin texto adicional]
 ```
+
+---
+
+## Prompt 5
+
+```
+Se le debe solicitar a la IA que implemente pruebas unitarias que permitan comprobar cada
+requerimiento. Las pruebas no deben limitarse a verificar verdadero/falso; por cada
+requerimiento funcional se debe incluir como mínimo:
+▪ Una prueba que compare el valor exacto esperado (por ejemplo, assertEquals(11,
+ruta.getMinutos())).
+▪ Casos límite (por ejemplo, una zona o un ala vacía, origen igual al destino,
+empates).
+▪ Entradas inválidas (por ejemplo, una parada o sala inexistente, o un dato mal
+formado), verificando el error o el resultado esperado.
+o Se recomienda JUnit para Java o NUnit para C#; el repositorio base ya incluye ambos
+configurados.
+o La solución debe subirse a GitHub, en un repositorio creado a partir del repositorio base, y
+el enlace se debe compartir en la sección designada para ello en el apartado del examen en
+la plataforma del TEC Digital.
+o Se le debe solicitar a la IA que genere un archivo README con las siguientes secciones:
+▪ Nombre del examen-proyecto.
+▪ Nombre de los autores.
+▪ Requerimientos del sistema: la lista completa de requerimientos de la Parte 1, tal
+como fueron presentados, sin modificaciones.
+▪ Instrucciones de instalación y ejecución, incluido cómo ejecutar las pruebas.
+▪ Descripción de la jerarquía de carpetas del proyecto y de lo que hace cada módulo
+o clase.
+3
+▪ Requerimientos desarrollados por los estudiantes: cuáles requerimientos se
+implementaron y cuáles se excluyeron, con el motivo de cada exclusión. Un
+requerimiento excluido no suma los puntos de implementación ni de pruebas
+correspondientes.
+▪ Diagrama de flujo, diagrama de componentes y diagrama del grafo que emplea el
+sistema, escritos en Mermaid dentro del README.
+```

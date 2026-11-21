@@ -13,8 +13,16 @@ public final class RadixSort {
 
     /** Devuelve una copia ordenada; no modifica el arreglo recibido. */
     public static Sala[] ordenarReporte(Sala[] salas) {
+        if (salas == null) throw new IllegalArgumentException("El arreglo de salas es nulo");
         Sala[] a = new Sala[salas.length];
-        for (int i = 0; i < salas.length; i++) a[i] = salas[i];
+        for (int i = 0; i < salas.length; i++) {
+            Sala s = salas[i];
+            if (s == null) throw new IllegalArgumentException("La sala en la posición " + i + " es nula");
+            if (s.ocupantes < 0) {
+                throw new IllegalArgumentException("La sala " + s.codigo + " tiene ocupantes negativos: " + s.ocupantes);
+            }
+            a[i] = s;
+        }
         a = ordenarPorCodigo(a);
         return ordenarPorOcupantesDesc(a);
     }

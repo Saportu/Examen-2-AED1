@@ -14,7 +14,9 @@ public class Pasillo {
         this.estado = estado;
     }
 
+    /** F3 RNF-02: pasillo cerrado o reportado como bloqueado. */
     public boolean bloqueado() {
-        return estado.startsWith("Bloqueado");
+        String e = estado.toLowerCase();
+        return e.startsWith("bloqueado") || e.startsWith("cerrado");
     }
 }

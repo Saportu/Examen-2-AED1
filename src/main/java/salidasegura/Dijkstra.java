@@ -51,19 +51,26 @@ public class Dijkstra {
 
     /** RF-02: segundos estimados hasta la salida, o -1 si no hay ruta. */
     public int segundos(String lugar) {
-        int i = grafo.indice(lugar);
-        return (i < 0 || dist[i] == INFINITO) ? -1 : dist[i];
+        int i = indiceExistente(lugar);
+        return dist[i] == INFINITO ? -1 : dist[i];
     }
 
     /** RF-01: lugares a recorrer desde la sala hasta la salida (vacío si no hay ruta). */
     public String[] ruta(String lugar) {
-        if (segundos(lugar) < 0) return new String[0];
+        int origen = indiceExistente(lugar);
+        if (dist[origen] == INFINITO) return new String[0];
         int largo = 0;
-        for (int v = grafo.indice(lugar); v != -1; v = siguiente[v]) largo++;
+        for (int v = origen; v != -1; v = siguiente[v]) largo++;
         String[] ruta = new String[largo];
         int k = 0;
-        for (int v = grafo.indice(lugar); v != -1; v = siguiente[v]) ruta[k++] = grafo.nombre(v);
+        for (int v = origen; v != -1; v = siguiente[v]) ruta[k++] = grafo.nombre(v);
         return ruta;
+    }
+
+    private int indiceExistente(String lugar) {
+        int i = lugar == null ? -1 : grafo.indice(lugar);
+        if (i < 0) throw new IllegalArgumentException("No existe el lugar " + lugar);
+        return i;
     }
 
     /** RF-01: salida que debe usar la sala, o null si no hay ruta. */

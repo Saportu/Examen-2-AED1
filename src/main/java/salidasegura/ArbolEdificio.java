@@ -12,6 +12,14 @@ public class ArbolEdificio {
     private final Nodo raiz = new Nodo("Edificio", null, null);
 
     public ArbolEdificio(Sala[] salas) {
+        this(new String[0], salas);
+    }
+
+    /** Registra primero las alas dadas (pueden quedar vacías) y luego las salas. */
+    public ArbolEdificio(String[] alas, Sala[] salas) {
+        for (String nombre : alas) {
+            if (raiz.buscarHijo(nombre) == null) raiz.agregarHijo(new Nodo(nombre, raiz, null));
+        }
         for (Sala s : salas) {
             validar(s.ocupantes, s.codigo);
             Nodo ala = raiz.buscarHijo(s.ala);

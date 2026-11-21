@@ -13,7 +13,12 @@ public class Grafo {
     private int[][] pesos = new int[0][0];
 
     public Grafo(Pasillo[] pasillos) {
+        if (pasillos == null) throw new IllegalArgumentException("El arreglo de pasillos es nulo");
         for (Pasillo p : pasillos) {
+            if (p.segundos < 0) {
+                throw new IllegalArgumentException(
+                    "Tiempo inválido en el pasillo " + p.desde + " - " + p.hacia + ": " + p.segundos);
+            }
             indiceOAgregar(p.desde);
             indiceOAgregar(p.hacia);
         }
