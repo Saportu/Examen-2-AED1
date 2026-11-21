@@ -132,7 +132,9 @@ LIB-001,Biblioteca,Este,45
 
 ---
 
-## Respuesta 1 (a preguntas de la IA)
+## Prompt 2
+
+Respuestas a las preguntas de la IA.
 
 Pregunta: "¿En qué lenguaje se implementa el sistema de evacuación (Salida Segura)?"
 
@@ -148,18 +150,18 @@ https://github.com/Saportu/Examen-2-AED1 utiliza la carpeta de github donde este
 
 ---
 
-## Respuesta 2 (aprobación)
+## Prompt 3
+
+Aprobación del plan de implementación y elección de la rama de trabajo (`salida-segura`, nueva).
 
 ```
-[Aprobación del plan de implementación en Claude Code — sin texto adicional]
+[Plan aprobado en la herramienta — sin texto adicional]
 ```
-
-Pregunta: rama de trabajo → `salida-segura` (nueva rama).
 
 ---
 
-## Respuesta 3 (acción en la app)
+## Prompt 4
 
 ```
-[Botón "Create PR" en Claude Code — sin texto adicional]
+[Botón "Create PR" en la herramienta — sin texto adicional]
 ```
