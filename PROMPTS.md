@@ -155,3 +155,11 @@ https://github.com/Saportu/Examen-2-AED1 utiliza la carpeta de github donde este
 ```
 
 Pregunta: rama de trabajo → `salida-segura` (nueva rama).
+
+---
+
+## Respuesta 3 (acción en la app)
+
+```
+[Botón "Create PR" en Claude Code — sin texto adicional]
+```
